@@ -19,7 +19,7 @@ describe ('Word') do
       word.save()
       word2 = Word.new('Pluto', nil)
       word2.save()
-      expect(Word.all).to(eq([sun, pluto]))
+      expect(Word.all).to(eq([word, word2]))
     end
   end
 
