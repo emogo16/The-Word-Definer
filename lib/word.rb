@@ -17,6 +17,14 @@ class Word
     @@words.values()
   end
 
+  def definitions
+    Definition.find_by_word(self.id)
+  end
+
+  def self.all
+    @@words.values()
+  end
+
   def save
     @@words[self.id] = Word.new(self.name, self.id)
   end
