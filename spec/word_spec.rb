@@ -68,7 +68,7 @@ describe ('Word') do
       word2 = Word.new("Star", nil)
       word2.save()
       word.delete()
-      expect(Word.all).to(eq([star]))
+      expect(Word.all).to(eq([word2]))
     end
   end
 
